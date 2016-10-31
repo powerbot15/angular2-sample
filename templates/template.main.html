@@ -5,5 +5,5 @@
 <h2>{{model.geographic.name}} - {{model.geographic.country}}</h2>
 
 <ul>
-    <li></li>
+    <li *ngFor="let item of model.geographic.items"></li>
 </ul>

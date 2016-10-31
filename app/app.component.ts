@@ -23,17 +23,17 @@ export class AppComponent {
 
     }
 
-    showWeather (response : any) {
-
-        console.dir(response);
-
-        this.model.geographic.country = response.city.country;
-
-    }
+    //showWeather (response : any) {
+    //
+    //    console.dir(response);
+    //
+    //    this.model.geographic.country = response.city.country;
+    //
+    //}
 
     checkWeather () {
 
-        this.service.getWeatherByCity(this.model.geographic.name, this.showWeather, this);
+        this.service.getWeatherByCity(this.model.geographic.name, this.model.setWeather, this.model);
 
     }
 }
