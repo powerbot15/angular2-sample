@@ -19,7 +19,7 @@ export class AppComponent {
 
     setName (event : any) {
 
-        this.model.geographic.name = event.target.value;
+        this.model.query = event.target.value;
 
     }
 
@@ -43,7 +43,7 @@ export class AppComponent {
 
     checkWeather () {
 
-        this.service.getWeatherByCity(this.model.geographic.name, this.model.setWeather, this.model);
+        this.service.getWeatherByCity(this.model.query, this.model.setWeather, this.model);
 
     }
 }
