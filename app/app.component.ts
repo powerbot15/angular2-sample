@@ -31,6 +31,16 @@ export class AppComponent {
     //
     //}
 
+    checkSearch (event : any) {
+
+        if(event.keyCode == 13){
+
+            this.checkWeather();
+
+        }
+
+    }
+
     checkWeather () {
 
         this.service.getWeatherByCity(this.model.geographic.name, this.model.setWeather, this.model);
