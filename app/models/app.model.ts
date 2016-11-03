@@ -1,8 +1,17 @@
+interface WeatherGeographic{
+
+    name : string,
+
+    country : string,
+
+    items : any[]
+
+}
 export class AppModel {
 
     query = '';
 
-    geographic = {
+    geographic : WeatherGeographic = {
 
         name : '',
 
