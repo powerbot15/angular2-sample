@@ -6,7 +6,7 @@
 </div>
 <div class="panel forecast">
     <h2 *ngIf="model.geographic.name">{{model.geographic.name}} - {{model.geographic.country}}</h2>
-    <ul>
+    <ul *ngIf="model.geographic.items.length">
         <li *ngFor="let item of model.geographic.items" class="weather-card">
             <h3>{{item.dt_txt}}</h3>
             <img src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png" alt="weather icon" data-icon>
